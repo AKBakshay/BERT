@@ -104,7 +104,7 @@ dataloaders_dict['val'] = DataLoader(dataloaders_dict['val'], batch_size=batch_s
 # tokenized_text = tokenizer.tokenize(some_text)
 # tokenizer.convert_tokens_to_ids(tokenized_text)
 
-# [TODO] Add module for converting the data to required format
+# [DONE] [TODO] Add module for converting the data to required format
 
 
 model = BertForSequenceClassification(num_labels)
@@ -116,7 +116,7 @@ model.load_state_dict(torch.load(state_dict_path))
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# [TODO] Add data dictionary for iterating over data.
+# [DONE] [TODO] Add data dictionary for iterating over data.
 
 def train_model(model,  optimizer, scheduler,  num_epochs=25):
     since = time.time()
